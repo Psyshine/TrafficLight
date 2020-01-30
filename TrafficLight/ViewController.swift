@@ -17,13 +17,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var greenLightView: UIView!
     
     @IBOutlet weak var starButton: UIButton!
-    
+   
     // MARK: Private Properties
     
-    private var trafficLightStatus = TrafficLighStatus.lightIsOff
+   private var trafficLightStatus = TrafficLighStatus.lightIsOff
     
-    private let lightOff: CGFloat = 0.3
-    private let lightOn: CGFloat = 1
+   private let lightOff: CGFloat = 0.3
+   private let lightOn: CGFloat = 1
     
     // MARK: Life Cicles Methods
     
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     
     // MARK: IB Actions
     
-    @IBAction func sturtButtonPressed() {
+    @IBAction func startButtonPressed() {
         starButton.setTitle("Next", for: .normal)
         
         switch trafficLightStatus {
@@ -53,13 +53,14 @@ class ViewController: UIViewController {
             greenLightView.backgroundColor = UIColor.green.withAlphaComponent(lightOn)
             trafficLightStatus = .greenLightIsOn
         }
+        
     }
     
     // MARK: Priavte Methods
     
-    private func setInitialView(for view: UIView) {
+   private func setInitialView(for view: UIView) {
         view.layer.cornerRadius = view.frame.width / 2
-        
+      
         switch view {
         case redLightView:
             view.backgroundColor = UIColor.red.withAlphaComponent(lightOff)
