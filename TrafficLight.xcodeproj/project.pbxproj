@@ -13,6 +13,7 @@
 		8E70C0A023E1B177004F1167 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E70C09E23E1B177004F1167 /* Main.storyboard */; };
 		8E70C0A223E1B179004F1167 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E70C0A123E1B179004F1167 /* Assets.xcassets */; };
 		8E70C0A523E1B17A004F1167 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E70C0A323E1B17A004F1167 /* LaunchScreen.storyboard */; };
+		8E70C0AF23E2CBF4004F1167 /* TrafficLightStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E70C0AE23E2CBF4004F1167 /* TrafficLightStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8E70C0A123E1B179004F1167 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E70C0A423E1B17A004F1167 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E70C0A623E1B17A004F1167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E70C0AE23E2CBF4004F1167 /* TrafficLightStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLightStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				8E70C09823E1B177004F1167 /* AppDelegate.swift */,
 				8E70C09A23E1B177004F1167 /* SceneDelegate.swift */,
+				8E70C0AE23E2CBF4004F1167 /* TrafficLightStatus.swift */,
 				8E70C09C23E1B177004F1167 /* ViewController.swift */,
 				8E70C09E23E1B177004F1167 /* Main.storyboard */,
 				8E70C0A123E1B179004F1167 /* Assets.xcassets */,
@@ -140,6 +143,7 @@
 			files = (
 				8E70C09D23E1B177004F1167 /* ViewController.swift in Sources */,
 				8E70C09923E1B177004F1167 /* AppDelegate.swift in Sources */,
+				8E70C0AF23E2CBF4004F1167 /* TrafficLightStatus.swift in Sources */,
 				8E70C09B23E1B177004F1167 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

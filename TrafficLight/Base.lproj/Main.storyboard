@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,85 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficLight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dlr-Cp-XmI">
+                                <rect key="frame" x="106.66666666666669" y="771" width="201" height="41"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="201" id="fdm-8d-eC2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Start!">
+                                    <color key="titleColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sturtButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="HhB-PO-xhJ"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VFY-Ag-tmp">
+                                <rect key="frame" x="144.66666666666666" y="72" width="124.99999999999997" height="391"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="znw-pe-8uW">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="125" id="L1q-vz-84R"/>
+                                            <constraint firstAttribute="width" constant="125" id="efT-k0-Ego"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GUb-me-LFj">
+                                        <rect key="frame" x="0.0" y="133" width="125" height="125"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="125" id="Nzd-z4-E0t"/>
+                                            <constraint firstAttribute="width" constant="125" id="oW0-f2-vc1"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ajf-W1-R6g">
+                                        <rect key="frame" x="0.0" y="266" width="125" height="125"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="125" id="QTp-Z7-wOu"/>
+                                            <constraint firstAttribute="width" constant="125" id="sCr-OM-x5J"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="GUb-me-LFj" firstAttribute="height" secondItem="znw-pe-8uW" secondAttribute="height" id="0uJ-cw-5FR"/>
+                                    <constraint firstItem="Ajf-W1-R6g" firstAttribute="width" secondItem="znw-pe-8uW" secondAttribute="width" id="Mpf-XB-k0a"/>
+                                    <constraint firstItem="GUb-me-LFj" firstAttribute="width" secondItem="znw-pe-8uW" secondAttribute="width" id="pji-lR-XIJ"/>
+                                    <constraint firstItem="Ajf-W1-R6g" firstAttribute="height" secondItem="znw-pe-8uW" secondAttribute="height" id="sYS-t1-m9F"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Dlr-Cp-XmI" secondAttribute="bottom" constant="50" id="1Gv-Ez-BL1"/>
+                            <constraint firstItem="VFY-Ag-tmp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Xe4-Hb-OA1"/>
+                            <constraint firstItem="Dlr-Cp-XmI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XsN-zR-aFH"/>
+                            <constraint firstItem="VFY-Ag-tmp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="efw-rf-t2c"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="greenLightView" destination="Ajf-W1-R6g" id="SpO-Mx-MhY"/>
+                        <outlet property="redLightView" destination="znw-pe-8uW" id="tpP-PS-OtZ"/>
+                        <outlet property="starButton" destination="Dlr-Cp-XmI" id="Pcu-Jt-wDG"/>
+                        <outlet property="yellowLightView" destination="GUb-me-LFj" id="eit-L5-mqv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
     </scenes>
 </document>
